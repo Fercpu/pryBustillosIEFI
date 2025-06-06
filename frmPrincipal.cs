@@ -37,9 +37,9 @@ namespace pryBustillosIEFI
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            if (rol == "Administrador")
+            if (rol == "Administrador") 
             {
-                usuariosTSMI.Visible = true;
+                usuariosTSMI.Visible = true; // 
                 auditoriaTSMI.Visible = true;
             }
             else 
@@ -80,6 +80,11 @@ namespace pryBustillosIEFI
             frmUsuarios lo = new frmUsuarios();
             this.Hide();
             lo.ShowDialog();
+        }
+
+        private void Usuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

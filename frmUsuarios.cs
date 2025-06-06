@@ -44,5 +44,15 @@ namespace pryBustillosIEFI
             btnListadoCompleto.Visible = false; 
 
         }
+
+        private void btnAgregarUs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

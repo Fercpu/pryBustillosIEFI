@@ -40,6 +40,7 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,17 +86,21 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(194, 26);
             this.txtDNI.TabIndex = 4;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Enabled = false;
             this.txtUsuario.Location = new System.Drawing.Point(147, 97);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(194, 27);
             this.txtUsuario.TabIndex = 5;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtContraseña
             // 
+            this.txtContraseña.Enabled = false;
             this.txtContraseña.Location = new System.Drawing.Point(147, 152);
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
@@ -114,6 +119,7 @@
             // 
             // cmbRol
             // 
+            this.cmbRol.Enabled = false;
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(147, 210);
             this.cmbRol.Name = "cmbRol";
@@ -129,6 +135,7 @@
             this.btnVolver.TabIndex = 9;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnEliminar
             // 
@@ -138,21 +145,35 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(276, 244);
+            this.btnModificar.Location = new System.Drawing.Point(283, 244);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 11;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnGuardarCambios
+            // 
+            this.btnGuardarCambios.Location = new System.Drawing.Point(254, 244);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(104, 23);
+            this.btnGuardarCambios.TabIndex = 12;
+            this.btnGuardarCambios.Text = "Guardar Cambios";
+            this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            this.btnGuardarCambios.Visible = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // frmBMusuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 282);
+            this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnVolver);
@@ -187,5 +208,6 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnGuardarCambios;
     }
 }

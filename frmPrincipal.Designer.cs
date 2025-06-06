@@ -104,6 +104,7 @@
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(47, 17);
             this.Usuario.Text = "Usuario";
+            this.Usuario.Click += new System.EventHandler(this.Usuario_Click);
             // 
             // Fecha
             // 

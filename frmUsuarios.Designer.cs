@@ -35,6 +35,7 @@
             this.btnListadoCompleto = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAgregarUs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,18 +49,19 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(353, 295);
+            this.btnVolver.Location = new System.Drawing.Point(216, 285);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.Size = new System.Drawing.Size(77, 43);
             this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(641, 295);
+            this.btnModificar.Location = new System.Drawing.Point(580, 285);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.Size = new System.Drawing.Size(90, 43);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -104,11 +106,22 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Nombre :";
             // 
+            // btnAgregarUs
+            // 
+            this.btnAgregarUs.Location = new System.Drawing.Point(388, 285);
+            this.btnAgregarUs.Name = "btnAgregarUs";
+            this.btnAgregarUs.Size = new System.Drawing.Size(120, 43);
+            this.btnAgregarUs.TabIndex = 7;
+            this.btnAgregarUs.Text = "Agregrar Usuarios";
+            this.btnAgregarUs.UseVisualStyleBackColor = true;
+            this.btnAgregarUs.Click += new System.EventHandler(this.btnAgregarUs_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 350);
+            this.Controls.Add(this.btnAgregarUs);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnListadoCompleto);
@@ -134,5 +147,6 @@
         private System.Windows.Forms.Button btnListadoCompleto;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAgregarUs;
     }
 }
